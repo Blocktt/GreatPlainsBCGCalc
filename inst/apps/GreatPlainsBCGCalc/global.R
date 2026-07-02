@@ -1,7 +1,7 @@
 # Shiny Global File
 
 # Version ----
-pkg_version <- "0.0.3.9018"
+pkg_version <- "0.0.3.9019"
 
 # Packages----
 library(BCGcalc)
@@ -93,7 +93,12 @@ dn_files_ref    <- "reference"
 dn_files_input  <- "_user_input"
 
 # Selection Choices----
-sel_community <- c("Fish", "Bugs_IA", "Bugs_KS", "Bugs_MO", "Bugs_NE")
+sel_community <- c("Fish",
+                   "Bugs_IA",
+                   "Bugs_KS",
+                   "Bugs_MO",
+                   "Bugs_NE",
+                   "Bugs_OK")
 
 ##  BCG Models ----
 url_bcg_base <- "https://github.com/leppott/BCGcalc/raw/main/inst/extdata"

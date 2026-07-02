@@ -1300,6 +1300,8 @@ shinyServer(function(input, output) {
         df_input[,"INDEX_NAME"] <- "MO_Bugs_BCG"
       } else if ((!"INDEX_NAME" %in% toupper(names(df_input))) & (my_comm == "Bugs_NE")) {
         df_input[,"INDEX_NAME"] <- "NE_Bugs_BCG"
+      } else if ((!"INDEX_NAME" %in% toupper(names(df_input))) & (my_comm == "Bugs_NE")) {
+        df_input[,"INDEX_NAME"] <- "OK_Bugs_BCG"
       }## IF ~ INDEX_NAME
 
       # QC, BMT community
