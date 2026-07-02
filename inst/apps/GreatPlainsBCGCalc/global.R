@@ -1,7 +1,7 @@
 # Shiny Global File
 
 # Version ----
-pkg_version <- "0.0.3.9019"
+pkg_version <- "0.0.3.9020"
 
 # Packages----
 library(BCGcalc)
@@ -25,6 +25,7 @@ library(rmarkdown)
 library(tools)
 library(openxlsx)
 library(leaflet)
+library(kableExtra) # reports
 
 # Source ----
 

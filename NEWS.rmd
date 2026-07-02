@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# GreatPlainsBCGCalc 0.0.3.9020 (2026-07-02)
+
+* fix: Add missing package to Global used for reports
+
 # GreatPlainsBCGCalc 0.0.3.9019 (2026-07-02)
 
 * refactor: Add "OK_Bugs_BCG" as option
