@@ -1,7 +1,7 @@
 # Shiny Global File
 
 # Version ----
-pkg_version <- "0.0.3.9020"
+pkg_version <- "0.0.3.9021"
 
 # Packages----
 library(BCGcalc)

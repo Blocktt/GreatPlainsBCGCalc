@@ -111,7 +111,8 @@ df %>%
   kable_styling(full_width = F, position = "left")
 ```
 
-**Bugs (as of 07/30/2024; more Index Classes will be added)**
+**Bugs**
+(as of 2026-07-08; more Index Classes may be added)
 
 ```{r table_req4}
 # Packages
@@ -132,4 +133,4 @@ df %>%
 
 ------------------------------------------------------------------------
 
-Last updated: 2024-08-09
+Last updated: 2026-07-08

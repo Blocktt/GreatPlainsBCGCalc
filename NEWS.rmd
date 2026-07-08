@@ -21,6 +21,10 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# GreatPlainsBCGCalc 0.0.3.9021 (2026-07-08)
+
+* refactor: Update text File Builder, within app for index name and classes for bugs
+
 # GreatPlainsBCGCalc 0.0.3.9020 (2026-07-02)
 
 * fix: Add missing package to Global used for reports
