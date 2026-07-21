@@ -1,11 +1,16 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-07-08 11:04:06.976645
+2026-07-21 12:48:11.602401
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-07-08 11:04:07.026205
+    #> Last Update: 2026-07-21 12:48:11.623421
+
+# GreatPlainsBCGCalc 0.0.3.9022 (2026-07-21)
+
+- refactor: Add BCG_3metmemb_xtab_METRICSORT.csv to output
+- refactor: Update Shiny prep code
 
 # GreatPlainsBCGCalc 0.0.3.9021 (2026-07-08)
 
