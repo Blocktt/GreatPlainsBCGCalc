@@ -1,11 +1,35 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2024-08-06 15:56:17.461021
+2026-07-21 12:48:11.602401
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2024-08-06 15:56:17.472438
+    #> Last Update: 2026-07-21 12:48:11.623421
+
+# GreatPlainsBCGCalc 0.0.3.9022 (2026-07-21)
+
+- refactor: Add BCG_3metmemb_xtab_METRICSORT.csv to output
+- refactor: Update Shiny prep code
+
+# GreatPlainsBCGCalc 0.0.3.9021 (2026-07-08)
+
+- refactor: Update text File Builder, within app for index name and
+  classes for bugs
+
+# GreatPlainsBCGCalc 0.0.3.9020 (2026-07-02)
+
+- fix: Add missing package to Global used for reports
+
+# GreatPlainsBCGCalc 0.0.3.9019 (2026-07-02)
+
+- refactor: Add “OK_Bugs_BCG” as option
+  - Global.R
+  - Server.R
+
+# GreatPlainsBCGCalc 0.0.3.9018 (2024-08-09)
+
+- reformat: Update links and example files
 
 # GreatPlainsBCGCalc 0.0.3.9017 (2024-08-06)
 
