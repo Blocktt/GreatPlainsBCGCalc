@@ -1,11 +1,15 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-07-21 12:48:11.602401
+2026-08-25 14:30:12.168494
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-07-21 12:48:11.623421
+    #> Last Update: 2026-08-25 14:30:12.271146
+
+# GreatPlainsBCGCalc 0.0.3.9023 (2026-08-25)
+
+- refactor: Taxa translate CAPS modified to single column, Issue \#4
 
 # GreatPlainsBCGCalc 0.0.3.9022 (2026-07-21)
 
