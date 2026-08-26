@@ -1,11 +1,21 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-08-25 14:30:12.168494
+2026-08-26 13:49:24.358627
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-08-25 14:30:12.271146
+    #> Last Update: 2026-08-26 13:49:24.378661
+
+# GreatPlainsBCGCalc 0.0.3.9025 (2026-08-26)
+
+- refactor: Modify “BCG_3metmemb_xtab_METRICSORT.csv” for alternate
+  rules, Issue \#6
+  - Add package to distinct function call
+
+# GreatPlainsBCGCalc 0.0.3.9024 (2026-08-25)
+
+- refactor: Modify order of columns in BCG Results file, Issue \#5
 
 # GreatPlainsBCGCalc 0.0.3.9023 (2026-08-25)
 

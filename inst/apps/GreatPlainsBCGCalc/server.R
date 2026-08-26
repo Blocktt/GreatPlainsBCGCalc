@@ -1511,7 +1511,7 @@ shinyServer(function(input, output) {
                                           , taxaid_dni = "DNI")
 
           } else {
-
+browser()
           df_metval_lr_t <- BioMonTools::metric.values(df_input_lr_t
                                           , fun.Community = BMT_comm
                                           , fun.MetricNames = metnames_lr_t
@@ -1536,7 +1536,7 @@ shinyServer(function(input, output) {
       } else if (my_comm == "Bugs_MO") {
         msg <- paste0("Index_Name, ", my_comm)
         message(msg)
-
+browser()
         # create LR TRUE and LR FALSE datasets
         df_input_lr_t <- df_input
         df_input_lr_f <- df_input %>%
@@ -1576,7 +1576,9 @@ shinyServer(function(input, output) {
           # drop ni_total (default) from lr_t
           df_metval <- merge(df_metval_lr_t[, !(names(df_metval_lr_t) %in% "ni_total")]
                              , df_metval_lr_f
-                             , by = c("SAMPLEID", "INDEX_NAME", "INDEX_CLASS"))
+                             , by = c("SAMPLEID",
+                                      "INDEX_NAME",
+                                      "INDEX_CLASS"))
         }## IF ~ nrow(df_input_lr_t)
 
 
@@ -1607,8 +1609,11 @@ shinyServer(function(input, output) {
       # cols_flags defined above
       cols_model_metrics <- unique(df_bcg_models[
         df_bcg_models$Index_Name == import_IndexName, "Metric_Name"])
-      cols_req <- c("SAMPLEID", "INDEX_NAME", "INDEX_CLASS"
-                    , "ni_total", "nt_total")
+      cols_req <- c("SAMPLEID",
+                    "INDEX_NAME",
+                    "INDEX_CLASS",
+                    "ni_total",
+                    "nt_total")
       cols_metrics_flags_keep <- unique(c(cols_req
                                           , cols_flags
                                           , cols_model_metrics))
@@ -1746,6 +1751,12 @@ shinyServer(function(input, output) {
 
       }## IF ~ check for matching index name and class
 
+      # Mofidy RESULTS column order, 20260521 (Boise)
+      # 20260825, GP
+      df_results <- df_results |>
+        dplyr::relocate(BCG_Status,
+                        BCG_Status2,
+                        .before = Primary_BCG_Level)
 
       # Save, Flags Summary
       # fn_levflags <- paste0(fn_input_base, fn_abr_save, "6levflags.csv")
@@ -1774,7 +1785,8 @@ shinyServer(function(input, output) {
       # 2026-07-21, Add from LowerBoise
       df_metmemb_xtab <- df_results |>
         # cols to keep
-        dplyr::select(SampleID, BCG_Status2, NumFlags) |>
+        # dplyr::select(SampleID, BCG_Status2, NumFlags) |>
+        dplyr::select(SampleID, BCG_Status2) |>
         # join tables
         dplyr::left_join(y = df_metmemb |>
                            dplyr::select(SAMPLEID,
@@ -1784,13 +1796,15 @@ shinyServer(function(input, output) {
                                          METRIC_VALUE,
                                          LEVEL,
                                          MEMBERSHIP,
-                                         METRIC_SORT),
+                                         METRIC_SORT)  |>
+                           # account for Rule 1 and 2 duplicates
+                           dplyr::distinct(),
                          by = dplyr::join_by(SampleID == SAMPLEID)) |>
         # pivot
         tidyr::pivot_wider(id_cols = c(INDEX_CLASS,
                                        SampleID,
                                        BCG_Status2,
-                                       NumFlags,
+                                       # NumFlags,
                                        METRIC_SORT,
                                        METRIC_NAME,
                                        DESCRIPTION,
