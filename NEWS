@@ -1,11 +1,15 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-08-26 13:49:24.358627
+2026-08-27 08:56:40.883813
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-08-26 13:49:24.378661
+    #> Last Update: 2026-08-27 08:56:40.900398
+
+# GreatPlainsBCGCalc 0.0.3.9026 (2026-08-27)
+
+- fix: Update BCG calculation for MO and IA to avoid crash
 
 # GreatPlainsBCGCalc 0.0.3.9025 (2026-08-26)
 
