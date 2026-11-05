@@ -1,11 +1,17 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-11-05 07:44:44.632859
+2026-11-05 08:34:35.727097
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-11-05 07:44:44.67988
+    #> Last Update: 2026-11-05 08:34:35.78067
+
+# GreatPlainsBCGCalc 0.0.3.9028 (2026-11-05)
+
+- fix: Change read of file to avoid class error, Issue \#10
+  - Rules.xlsx column 19 (MetricSort)
+  - Increase guess_max from 10^3 to 10^6
 
 # GreatPlainsBCGCalc 0.0.3.9027 (2026-11-05)
 
