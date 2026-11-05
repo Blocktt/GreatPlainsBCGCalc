@@ -21,6 +21,15 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# GreatPlainsBCGCalc 0.0.3.9030 (2026-11-05)
+
+* refactor: Hide tabs under Prep Data, Issue #12
+    + Introduction
+    + Outside the App
+* refactor: Rename tab, Issue #12
+    + Pre Data
+        - Drop "Within the App: " from "File Builder"
+
 # GreatPlainsBCGCalc 0.0.3.9029 (2026-11-05)
 
 * fix: Add alert for multiple index name/class per sampleid, Issue #11

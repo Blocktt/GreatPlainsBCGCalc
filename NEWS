@@ -1,11 +1,20 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-11-05 11:10:44.978384
+2026-11-05 13:43:07.975416
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-11-05 11:10:45.013167
+    #> Last Update: 2026-11-05 13:43:08.05752
+
+# GreatPlainsBCGCalc 0.0.3.9030 (2026-11-05)
+
+- refactor: Hide tabs under Prep Data, Issue \#12
+  - Introduction
+  - Outside the App
+- refactor: Rename tab, Issue \#12
+  - Pre Data
+    - Drop “Within the App:” from “File Builder”
 
 # GreatPlainsBCGCalc 0.0.3.9029 (2026-11-05)
 
