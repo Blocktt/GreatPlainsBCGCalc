@@ -1,11 +1,15 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-11-05 08:34:35.727097
+2026-11-05 11:10:44.978384
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-11-05 08:34:35.78067
+    #> Last Update: 2026-11-05 11:10:45.013167
+
+# GreatPlainsBCGCalc 0.0.3.9029 (2026-11-05)
+
+- fix: Add alert for multiple index name/class per sampleid, Issue \#11
 
 # GreatPlainsBCGCalc 0.0.3.9028 (2026-11-05)
 

@@ -1307,6 +1307,7 @@ shinyServer(function(input, output) {
                              , header = TRUE
                              , sep = input$sep
                              , stringsAsFactors = FALSE)
+      ### QC ----
       # QC, FAIL if TRUE
       if (is.null(df_input)) {
         return(NULL)
@@ -1336,7 +1337,33 @@ shinyServer(function(input, output) {
         BMT_comm <- "bugs"
       } else {
         BMT_comm <- "fish"
-      }
+      }## IF ~ community
+
+      # QC, SAMPLEID, INDEX_NAME, INDEX_CLASS combos
+      # 20261105
+      n_unique_sampid <- length(unique(df_input[, "SAMPLEID"]))
+      n_unique_sampid_index <- nrow(unique(df_input[, c("SAMPLEID",
+                                                        "INDEX_NAME",
+                                                        "INDEX_CLASS")]))
+      if (n_unique_sampid != n_unique_sampid_index) {
+        # pop up
+        msg <- paste0("Duplicate INDEX NAME/CLASS per SAMPLEID!",
+                      "\n\n",
+                      "Unique SAMPLEID = ", n_unique_sampid,
+                      "\n\n",
+                      "Unique combos (SAMPLEID, INDEX_NAME, INDEX_CLASS) = ",
+                      n_unique_sampid_index)
+        shinyalert::shinyalert(title = "Data ERROR"
+                               , text = msg
+                               , type = "error"
+                               , closeOnEsc = TRUE
+                               , closeOnClickOutside = TRUE)
+        validate(msg)
+      }## IF ~ n_unique
+
+      # QC, INDEX* Match
+      ## index name/class in data matches rules
+
 
       ## Calc, 2, Exclude Taxa ----
       prog_detail <- "Calculate, Exclude Taxa"
