@@ -1,15 +1,20 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-08-27 08:56:40.883813
+2026-11-05 07:44:44.632859
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-08-27 08:56:40.900398
+    #> Last Update: 2026-11-05 07:44:44.67988
+
+# GreatPlainsBCGCalc 0.0.3.9027 (2026-11-05)
+
+- refactor: Update OK taxa translator output folder, Issue \#9
+  - results_BCG to results_BCG_OK_BCG
 
 # GreatPlainsBCGCalc 0.0.3.9026 (2026-08-27)
 
-- fix: Update BCG calculation for MO and IA to avoid crash
+- fix: Update BCG calculation for MO and IA to avoid crash, Issue \#7
 
 # GreatPlainsBCGCalc 0.0.3.9025 (2026-08-26)
 
