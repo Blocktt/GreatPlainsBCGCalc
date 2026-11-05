@@ -13,10 +13,10 @@ function() {
                                                   , "rmd_html"
                                                   , "ShinyHTML_About_2StudyArea.html"))
                 )
-                , tabPanel(title = "Basic Information"
+                , tabPanel(title = "Requirements"
                            ,includeHTML(file.path("www"
                                                   , "rmd_html"
-                                                  , "ShinyHTML_About_3BasicInfo.html"))
+                                                  , "ShinyHTML_About_3Requirements.html"))
                 )
                 , tabPanel(title = "Funding"
                            ,includeHTML(file.path("www"

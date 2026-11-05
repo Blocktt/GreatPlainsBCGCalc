@@ -1,11 +1,17 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-11-05 14:31:23.316664
+2026-11-05 15:00:53.58233
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-11-05 14:31:23.392025
+    #> Last Update: 2026-11-05 15:00:53.860307
+
+# GreatPlainsBCGCalc 0.0.3.9032 (2026-11-05)
+
+- refactor: Update About - Requirements subtab, Issue \#16
+  - Rename ‘Basic Information’ to ‘Requirements’
+  - Update text
 
 # GreatPlainsBCGCalc 0.0.3.9031 (2026-11-05)
 
