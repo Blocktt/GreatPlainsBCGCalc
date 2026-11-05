@@ -21,6 +21,12 @@ knitr::opts_chunk$set(
 cat(paste0("Last Update: ",Sys.time()))
 ```
 
+# GreatPlainsBCGCalc 0.0.3.9033 (2026-11-05)
+
+* refactor: Update Calculation tab, Issue # 13
+    + Update text
+    + Remove subtabs
+
 # GreatPlainsBCGCalc 0.0.3.9032 (2026-11-05)
 
 * refactor: Update About - Requirements subtab, Issue #16
