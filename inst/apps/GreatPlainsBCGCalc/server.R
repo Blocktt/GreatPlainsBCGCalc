@@ -2050,14 +2050,14 @@ shinyServer(function(input, output) {
     leaflet(data = df_map) %>%
       # Groups, Base
       # addTiles(group="OSM (default)") %>%  #default tile too cluttered
-      addProviderTiles("CartoDB.Positron"
-                       , group = "Positron") %>%
+      addProviderTiles(providers$Esri.WorldGrayCanvas,
+                       , group = "ESRI Gray") %>%
       addProviderTiles(providers$OpenStreetMap
                        , group = "Open Street Map") %>%
       addProviderTiles(providers$Esri.WorldImagery
                        , group = "ESRI World Imagery") %>%
     # Layers, Control
-    addLayersControl(baseGroups = c("Positron"
+    addLayersControl(baseGroups = c("ESRI Gray"
                                     , "Open Street Map"
                                     , "ESRI World Imagery"
                                     # , "USGS Imagery"
@@ -2756,7 +2756,7 @@ shinyServer(function(input, output) {
                 , values = NA
                 , title = leg_title) %>%
       # Layers, Control
-      addLayersControl(baseGroups = c("Positron"
+      addLayersControl(baseGroups = c("ESRI Gray"
                                       , "Open Street Map"
                                       , "ESRI World Imagery")
                        , overlayGroups = c("Samples"

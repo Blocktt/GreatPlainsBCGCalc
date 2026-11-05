@@ -1,15 +1,20 @@
 GreatPlainsBCGCalc-NEWS
 ================
 <Ben.Block@tetratech.com>
-2026-11-05 16:39:04.464163
+2026-11-05 16:48:51.940741
 
 <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
-    #> Last Update: 2026-11-05 16:39:04.539471
+    #> Last Update: 2026-11-05 16:48:51.959542
+
+# GreatPlainsBCGCalc 0.0.3.9034 (2026-11-05)
+
+- fix: Map baselayer, Issue \#18
+  - replace positron with Esri.WorldGrayCanvas
 
 # GreatPlainsBCGCalc 0.0.3.9033 (2026-11-05)
 
-- refactor: Update Calculation tab, Issue \# 13
+- refactor: Update Calculation tab, Issue \#13
   - Update text
   - Remove subtabs
 
