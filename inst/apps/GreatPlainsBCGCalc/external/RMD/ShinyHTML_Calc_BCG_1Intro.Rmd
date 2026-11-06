@@ -1,6 +1,6 @@
 ---
 title: "Calculation, BCG, Intro"
-date: "2026-11-05"
+date: "2026-11-06"
 output: html_fragment
 editor_options: 
   markdown: 
@@ -14,30 +14,68 @@ knitr::opts_chunk$set(echo = FALSE
                       , message = FALSE)
 ```
 
-# Purpose
+# BCG Calculator
 
-Calculate outputs for the statewide Oregon/Washington BCG model (in development)
-.  The BCG model is intended to be applied to samples that meet the following
-criteria:
+Methods matter! The BCG models are calibrated for specific collection and
+processing protocols. When applying the models, make sure you have the correct
+Index_Name and Index_Class 
+[<a href="links/GP_IndexNameIndexClass_20261105.xlsx" target="_blank">XLSX</a>]
+in the input file and are applying the model to the correct type of data. For
+example, the Kansas macroinvertebrate model should only be applied to data
+collected and processed with Kansas Department of Health and Environment (KDHE)
+methods and the Missouri model should only be applied to data collected and
+processed with Missouri Department of Natural Resources (MO DNR) methods.
 
-*	Freshwater wadeable streams
+*	Bug methods [<a href="links/GP_Bug_Methods_20240730.pdf" target="_blank">PDF</a>]
 
-*	Target number of organisms: 500. The number of individuals should not exceed
-600; if it does, random subsampling should be applied
+*	Fish methods [<a href="links/GP_Fish_Methods_20240730.pdf" target="_blank">PDF</a>]
 
-*	Sampling effort: at least 8 ft2 sampling area
+STEP 1: GO TO THE ‘IMPORT FILE’ TAB AND UPLOAD THE FILE BUILDER OUTPUT FILE (BCG_TaxaTranslator_TAXAATTR.csv)
 
-*	Lowest practical taxonomic resolution based on current 
-<a href="https://pnamp.org/projects/nwste/" target="blank">PNMR Standard Taxonomic Effort</a> 
-guidelines
+STEP 2: RETURN TO THE CALCULATION TAB AND RUN THE BCG CALCULATOR
 
-*	Collection gear: D-Frame kick-nets or Surber net with 500-micrometer mesh net
+The R code will perform the following steps:
 
-*	Collection method: targeted-riffle or reachwide, multihabitat (Hayslip 2007
-[<a href="links/Hayslip.pdf" target="blank">PDF</a>])
+1.	Mark non-distinct taxa (excluded from richness metrics)
 
-*	Collection period: summer baseflow period (typically June through mid-October)
+2.	Calculate metric values for each sample
+
+3.	Calculate BCG metric membership values for each sample
+
+4.	Assign each sample membership in a BCG level
+
+Note: the default setting is for the R code to mark redundant/non-distinct taxa
+[<a href="links/RedundantTaxa_20240719.pdf" target="_blank">PDF</a>]. 
+If you want to use an alternate scheme, uncheck the box, include your 
+designations (TRUE/FALSE) in the input file and name the column ‘EXCLUDE.’
+
+STEP 3: DOWNLOAD AND UNZIP THE RESULTS
+
+The files will be added to the appropriate subfolder (depending on the Index_Name).
+
+This brief memo 
+[<a href="links/FuzzySetExplanation_20260526.pdf" target="_blank">PDF</a>]
+provides background information on how the BCG model works.
+
+List of BCG calculation outputs.
+
+|Output file|	Description|
+|:----------|:-----------|
+|_BCG_RESULTS (CSV)	|BCG model output for each sample with flags (if utilized). Includes primary and secondary BCG levels and membership values, plus continuous BCG score, and narratives with and without pluses and minuses.|
+|_BCG_RESULTS (HTML) |Histogram showing distribution of samples across BCG levels.
+BCG_1markexcl |Input file with an ‘EXCLUDE’ taxa column added in (a TRUE/FALSE field in which R marks redundant taxa as ‘TRUE’ based on the taxonomic hierarchy fields in the input file).|
+|BCG_2metvall_all	|Output with all metrics for the selected assemblage (bugs, fish or diatoms) in the BioMonTools R package (<a href="https://CRAN.R-project.org/package=BioMonTools" target="_blank">https://CRAN.R-project.org/package=BioMonTools</a>)|
+|BCG_2metval_BCG |Output limited to metrics used in the BCG model for the selected assemblage; the calculations are done with the BioMonTools R package (<a href="https://CRAN.R-project.org/package=BioMonTools" target="_blank">https://CRAN.R-project.org/package=BioMonTools</a>)|
+|BCG_3metmemb	|Metric values for each sample plus metric membership values (0-1) for each BCG level|
+|BCG_3metmemb_xtab_METRICSORT	|For each sample, shows the BCG level, metric values and metric membership values (0-1) for each BCG level|
+|BCG_3metrules |Rules for each BCG level (metrics, thresholds, symbols).|
+|BCG_4levmemb	|For each sample, membership in each BCG level (0-1).|
+|BCG_5levassign	|Results without the flags (primary, secondary BCG levels and membership, continuous BCG score, narrative with and without pluses and minuses)|
+|BCG_6levflags	|Summary of how many samples had flagged metrics (and not flagged) based on the input file; count of # flagged (flag) and not flagged (NA). Not all |BCG models utilize flag metrics, in which case this output is a placeholder.|
+|BCG_6metflags |Results of flag calculations for all metrics and samples. Not all BCG models utilize flag metrics, in which case this output is a placeholder. |
+
+Having problems? See the Troubleshooting tab.
 
 ------------------------------------------------------------------------
 
-*Last updated 2026-11-05*
+*Last updated 2026-11-06*
