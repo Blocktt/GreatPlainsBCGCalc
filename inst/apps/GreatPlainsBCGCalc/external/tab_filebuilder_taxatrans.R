@@ -47,7 +47,7 @@ function() {
        , mainPanel(
             tabPanel(title = "TaxaTrans_About"
                      ,includeHTML(file.path("www", "rmd_html"
-                                            , "ShinyHTML_FB_TaxaTrans_1About.html"))
+                                            , "ShinyHTML_FB_intro.html"))
                      )## tabPanel ~ END
     )## mainPanel ~ END
   )##sidebarLayout ~ END
@@ -56,17 +56,3 @@ function() {
 }##FUNCTION ~ END
 
 
-# , mainPanel(
-#   tabsetPanel(type = "tabs"
-#               , tabPanel(title = "TaxaTrans_About"
-#                          ,includeHTML(file.path("www"
-#                                                 , "rmd_html"
-#                                                 , "ShinyHTML_FB_TaxaTrans_1About.html"))
-#               )
-#               , tabPanel(title = "TaxaTrans_Output"
-#                          ,includeHTML(file.path("www"
-#                                                 , "rmd_html"
-#                                                 , "ShinyHTML_FB_TaxaTrans_2Output.html"))
-#               )
-#   )## tabsetPanel ~ END
-# )## mainPanel ~ END
